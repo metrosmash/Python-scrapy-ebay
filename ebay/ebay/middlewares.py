@@ -13,8 +13,8 @@ class CustomProxyMiddleware(object):
     def process_request(self, request, spider):
         request.meta["proxy"] = "IP Address:Port"
         dict = {
-                "User": "*******",
-                "Passw": "******"}
+                "User": "Username",
+                "Passw": "Password"}
 
         request.headers["Proxy-Authorization"] = basic_auth_header(dict['User'], dict['Passw'])
 class EbaySpiderMiddleware:
